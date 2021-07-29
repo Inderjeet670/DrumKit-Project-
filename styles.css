@@ -86,8 +86,3 @@ background-image: url(./images/crash.png);
   background-color: white;
 }
 
-.drum:hover{
-  box-shadow: 5px 5px 10px white;
-  transform: translateY(-2px);
-  transition: ease-in-out .1s;
-}

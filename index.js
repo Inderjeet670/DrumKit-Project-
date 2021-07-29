@@ -5,6 +5,7 @@ let sound
 
 document.addEventListener('keydown', function(keyPressed){
      soundplay(keyPressed.key)
+     buttonAnimation(keyPressed.key)
 })
 
 for(let i = 0; i < length; i++){
@@ -12,6 +13,7 @@ for(let i = 0; i < length; i++){
     
     document.querySelectorAll('.drum')[i].addEventListener('click', function(){
         soundplay(this.innerHTML)
+        buttonAnimation(this.innerHTML)
     })
 }
 
@@ -43,4 +45,14 @@ function soundplay(whatever){
               console.log(this.innerHTML)
   
       }
+}
+
+function buttonAnimation(e){
+     let event = document.querySelector("." + e);
+
+     event.classList.add("pressed");
+
+     setTimeout(() => {
+          event.classList.remove("pressed");
+     }, 0150);
 }
